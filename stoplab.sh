@@ -51,7 +51,7 @@ if [ -f $dir/rx ] || [ -f $dir/tx ]; then
   rm $dir/rx
   rm $dir/tx
   echo "No Network Activity so stopping the instance" >> $log
-  commandtoreplace
+  bash /etc/labasservice/shutdown_if_inactive/stoplab.sh
 fi
 
 #Check if RX/TX Files Doesn’t Exist
