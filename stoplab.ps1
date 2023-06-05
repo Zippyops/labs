@@ -50,7 +50,7 @@ if ( (Test-Path -Path "$dir\rx") -or (Test-Path -Path "$dir\tx") ) {
         Remove-Item (Join-Path $dir "rx")
         Remove-Item (Join-Path $dir "tx")
         "No Network Activity so stopping the instance" | Out-File $log -Append
-        powershell.exe C:\Users\training\shutdown_if_inactive\stoplab.ps1
+        powershell.exe C:\labasservice\stoplab.ps1
     } else {
 		"Network Activity is FINE in the instance" | Out-File $log -Append
 	}
