@@ -3,7 +3,7 @@
 # from 20 minutes ago to detect if they significantly increased.
 # If they haven’t, it will force the system to sleep.
 
-$dir = "C:\Users\training\shutdown_if_inactive"
+$dir = "C:\labasservice\networkusage"
 if (-not (Test-Path $dir)) {
     New-Item -ItemType Directory -Path $dir | Out-Null
 }
