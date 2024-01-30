@@ -38,8 +38,8 @@ if [ -f $dir/rx ] || [ -f $dir/tx ]; then
   echo $tx > $dir/tx ## Write packets to TX file
 
   # Calculate threshold limit
-  t_rx=`expr $p_rx + 1000`
-  t_tx=`expr $p_tx + 1000`
+  t_rx=`expr $p_rx + 10000`
+  t_tx=`expr $p_tx + 10000`
 
   echo "Threshold Values" >> $log
   echo "t_rx: "$t_rx >> $log
@@ -52,8 +52,7 @@ if [ -f $dir/rx ] || [ -f $dir/tx ]; then
   rm $dir/tx
   echo "No Network Activity so stopping the instance" >> $log
   bash /etc/labasservice/shutdown_if_inactive/stoplab.sh
-fi
-
+  fi
 #Check if RX/TX Files Doesn’t Exist
 else
   echo $rx > $dir/rx ## Write packets to file
