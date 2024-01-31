@@ -37,8 +37,8 @@ if ( (Test-Path -Path "$dir\rx") -or (Test-Path -Path "$dir\tx") ) {
     "$tx" | Out-File (Join-Path $dir "tx") # Write packets to TX file
 
     # Calculate threshold limit
-    $t_rx = [int]$p_rx + 100000
-    $t_tx = [int]$p_tx + 50000
+    $t_rx = [int]$p_rx + 1000000
+    $t_tx = [int]$p_tx + 500000
 
     "Threshold Values" | Out-File $log -Append
     "t_rx: $t_rx" | Out-File $log -Append
